@@ -12,6 +12,8 @@ def add_to_calculation(symbol):
 def evaluate_calculation():
     global calculation
     try:
+        if "/0" in calculation:
+            raise ValueError("Cannot divide by zero")
         calculation = str(eval(calculation))
         text_result.delete(1.0, "end")
         text_result.insert(1.0, calculation)
