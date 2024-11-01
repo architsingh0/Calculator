@@ -72,10 +72,15 @@ btnEqu = tk.Button(root, text="=", command=evaluate_calculation, width=5, height
 btnEqu.grid(row=6,column=3)
 btnDec = tk.Button(root, text=".", command=lambda: add_to_calculation("."), width=5, height=2, font=("Arial", 14))
 btnDec.grid(row=6,column=2)
-# btnSqr = tk.Button(root, text="x²", command=lambda: add_to_calculation("**2"), width=5, height=2, font=("Arial", 14))
-# btnSqr.grid(row=6,column=0)
+btnSqr = tk.Button(root, text="x²", command=lambda: add_to_calculation("**2"), width=5, height=2, font=("Arial", 14))
+btnSqr.grid(row=4,column=4)
 
 # Square root button
 btnSqrt = tk.Button(root, text="√", command=lambda: add_to_calculation("math.sqrt("), width=5, height=2, font=("Arial", 14))
-btnSqrt.grid(row=6, column=0)
+btnSqrt.grid(row=3, column=4)
+
+# Percentage button
+btnPerc = tk.Button(root, text="%", command=lambda: add_to_calculation("/100"), width=5, height=2, font=("Arial", 14))
+btnPerc.grid(row=2, column=4)
+
 root.mainloop()
